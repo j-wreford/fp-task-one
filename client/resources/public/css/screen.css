@@ -1,0 +1,117 @@
+html,
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/material-icons/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(/assets/material-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(/assets/material-icons/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(/assets/material-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #1C1F27;
+}
+
+pre, code {
+  background-color: #303644 !important;
+  color: #E8CEAA !important;
+  border-radius: 3px;
+}
+
+body .navbar.is-info {
+  background-color: transparent;
+  padding: 15px 0;
+}
+
+.navbar a {
+}
+
+#home-link {
+  color: #9E73A1;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+  font-weight: 300;
+  transition: background 0.3s ease-in-out;
+}
+
+#home-link:hover {
+    background-color: #303644;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #C97373 !important;
+  font-weight: 400 !important;
+}
+
+p {
+  color: #BFC6D2;
+}
+
+.content {
+  text-align: center;
+}
+
+.section {
+
+}
+
+.mazes {
+  text-align: center;
+}
+
+.mazes .maze-container {
+  display: inline-block;
+}
+
+.maze-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.maze {
+  width: 100%;
+}
+
+.maze-stats {
+  margin-top: 30px;
+}
+
+.maze-stat {
+    margin-bottom: 30px;
+    display: inline-block;
+    min-width: 24%;
+    margin: 20px 10px 0;
+}

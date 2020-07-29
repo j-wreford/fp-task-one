@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block page-scripts %}
+  {% script "/js/draw-maze.js" %}
+{% endblock %}
+{% block content %}
+  <div class="content">
+    <h4>{{maze.maze-config.size.rows}} x {{maze.maze-config.size.rows}} Maze</h4>
+    {% include "maze-view.html" with maze route %}
+    <div class="maze-stats">
+      <div class="maze-stat">
+        <h6>Start Coord</h6>
+        <pre>{{maze.maze-config.start}}</pre>
+      </div>
+      <div class="maze-stat">
+        <h6>Goal Coord</h6>
+        <pre>{{maze.maze-config.goal}}</pre>
+      </div>
+      <div class="maze-stat">
+        <h6>Solution Distance</h6>
+        <pre>{{route|count}}</pre>
+      </div>
+      <div class="maze-stat">
+        <h6>Generation Algorithm</h6>
+        <pre>{{maze.maze-config.algorithm}}</pre>
+      </div>
+      <div class="maze-stat">
+        <h6>Generation Date</h6>
+        <pre>{{maze.generated-at}}</pre>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block page-scripts %}
+  {% script "/js/draw-maze.js" %}
+{% endblock %}
+{% block content %}
+  <div class="content">
+    <h3>Mazes</h3>
+    <p>
+      Select one of the {{mazes|count}} mazes below to solve. Learn how to generate one <a href="/gen">here</a>.
+    </p>
+    <div class="mazes">
+      {% for maze in mazes %}
+        <a href="/maze/{{maze._id}}">
+          {% include "maze-view.html" with maze %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

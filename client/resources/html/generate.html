@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content">
+    <h3>Generate Maze</h3>
+    <p>
+        Sadly there does not exist a UI to generate a maze. However, with the maze API server running,<br>
+        make a request to <code>POST http://127.0.0.1:5000/maze</code>
+    </p>
+    <h6 style="margin-top: 75px;">JSON Body Required Fields</h6>
+    <pre style="text-align: left;">
+        # size - Object
+        an object of {rows: n, cols: n} where n is the desired number of rows and columns
+
+        # start - Array
+        a two item array of [row, col]
+
+        # goal - Array
+        a two item array of [row, col]
+
+        # algorithm - String
+        a value of {"binary-tree" | "binary-tree-recur"}
+    </pre>
+    <h6>Example Body</h6>
+    <pre style="text-align: left;">
+{
+	"size": {
+		"rows": 10,
+		"cols": 10
+
+	},
+	"start": [0, 0],
+	"goal": [9, 0],
+	"algorithm": "binary-tree"
+}
+    </pre>
+</div>
+{% endblock %}
